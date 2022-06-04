@@ -1,5 +1,5 @@
 # Aether
-Unity Game Engine Event Manager
+Unity Game Engine Event Management System
 
 ## Feature Overview
 - global events with Event or events local to a context with ContextEvent
