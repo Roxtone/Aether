@@ -1,6 +1,14 @@
 # Aether
 Unity Game Engine Event Manager
 
+## Feature Overview
+- global events with Event or events local to a context with ContextEvent
+- no need to remove listeners in OnDestroy for MonoBehaviours
+- event queue: all listeners of the original event are executed before any listener of a nested event
+- listener predicate conditions
+- 3 priority queues per event type
+- easy access to the last event of any type
+
 ## Installation
 Install via _Add package from git URL_ in the Package Manager.
 
@@ -18,7 +26,7 @@ public class ExampleEvent : Aether.Event<ExampleEvent>
     }
 }
 ```
-Add listeners and remove when not needed anymore (they will be automatically removed when the game object has been destroyed):
+Add listeners and remove when not needed anymore (they will be automatically removed when the game object gets destroyed):
 ```
 public class ExampleListener : MonoBehaviour
 {
