@@ -1,0 +1,8 @@
+using Aether;
+
+namespace AetherEvents
+{
+	public class #SCRIPTNAME# : Event<#SCRIPTNAME#>
+	{
+	}
+}
