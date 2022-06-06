@@ -2,7 +2,7 @@ using Aether;
 
 namespace AetherEvents
 {
-	public class #SCRIPTNAME# : Event<#SCRIPTNAME#>
-	{
-	}
+    public class #SCRIPTNAME# : Event<#SCRIPTNAME#>
+    {
+    }
 }

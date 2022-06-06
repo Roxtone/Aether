@@ -2,10 +2,10 @@ using Aether;
 
 namespace AetherEvents
 {
-	public class #SCRIPTNAME# : ContextEvent<#SCRIPTNAME#, IContext>
-	{
-		public #SCRIPTNAME#(IContext context) : base(context)
+    public class #SCRIPTNAME# : ContextEvent<#SCRIPTNAME#, IContext>
+    {
+        public #SCRIPTNAME#(IContext context) : base(context)
         {
         }
-	}
+    }
 }
