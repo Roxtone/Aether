@@ -3,5 +3,7 @@
     "version": "0.1.1",
     "displayName": "Aether",
     "unity": "2018.4",
-    "description": "Unity Game Engine Event Manager"
+    "description": "Unity Game Engine Event Management System",
+    "author": { "name": "Roxtone", "url" : "https://github.com/Roxtone" },
+    "documentationUrl" : "https://github.com/Roxton/Aether"
 }
