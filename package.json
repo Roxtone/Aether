@@ -1,9 +1,10 @@
 {
     "name": "com.github.roxtone.aether",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "displayName": "Aether",
     "unity": "2018.4",
     "description": "Unity Game Engine Event Management System",
     "author": { "name": "Roxtone", "url" : "https://github.com/Roxtone" },
-    "documentationUrl" : "https://github.com/Roxtone/Aether"
+    "documentationUrl" : "https://github.com/Roxtone/Aether",
+    "hideInEditor" : "false"
 }
