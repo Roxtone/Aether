@@ -12,7 +12,7 @@ namespace Aether
             {
                 if (context == null)
                 {
-                    context = GetComponentInParent<C>();
+                    context = gameObject.GetComponentInParent<C>(true);
                 }
                 return context;
             }

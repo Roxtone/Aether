@@ -1,6 +1,6 @@
 {
     "name": "com.github.roxtone.aether",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "displayName": "Aether",
     "unity": "2018.4",
     "description": "Unity Game Engine Event Management System",
