@@ -10,7 +10,7 @@ namespace Aether.Internal
 
         public static E Last { get; private set; }
 
-        protected static void AddListenerBase(Action<E> action, IContext context, Priority priority, Func<E, bool> predicate)
+        protected static void AddListenerBase(Action<E> action, IContext context, Priority priority, Func<E, bool> predicate, object target)
         {
             List<Listener> listenersInContext = globalListeners;
             if (context != null && !contextListeners.TryGetValue(context, out listenersInContext))
@@ -18,7 +18,7 @@ namespace Aether.Internal
                 listenersInContext = new List<Listener>();
                 contextListeners.Add(context, listenersInContext);
             }
-            listenersInContext.Add(new Listener() { Action = action, Priority = priority, Predicate = predicate });
+            listenersInContext.Add(new Listener() { Action = action, Priority = priority, Predicate = predicate, Target = target ?? action.Target });
         }
 
         protected static void RemoveListenerBase(Action<E> action)
@@ -57,7 +57,7 @@ namespace Aether.Internal
             }
             if (listenersInContext != null)
             {
-                listenersInContext.RemoveAll(l => l.Action.Target != null && l.Action.Target is UnityEngine.Object o && o == null);
+                listenersInContext.RemoveAll(l => l.Target != null && l.Target is UnityEngine.Object o && o == null);
             }
         }
 
@@ -99,6 +99,7 @@ namespace Aether.Internal
             public Action<E> Action;
             public Priority Priority;
             public Func<E, bool> Predicate;
+            public object Target;
         }
     }
 }

@@ -7,9 +7,9 @@ namespace Aether
     {
         public static readonly C GlobalContext = null;
 
-        public static void AddListener(Action<E> action, C context, Priority priority = Priority.Default, Func<E, bool> predicate = null)
+        public static void AddListener(Action<E> action, C context, Priority priority = Priority.Default, Func<E, bool> predicate = null, object target = null)
         {
-            AddListenerBase(action, context, priority, predicate);
+            AddListenerBase(action, context, priority, predicate, target);
         }
 
         public static void RemoveListener(Action<E> action)
